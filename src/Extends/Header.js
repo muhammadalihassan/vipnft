@@ -12,7 +12,7 @@ function Header() {
     return (
       <Navbar  expand="lg">
       <Container>
-        <Navbar.Brand href="/funguysnft">
+        <Navbar.Brand href="/">
           <h2><span>The</span> FunGuys</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,6 +22,7 @@ function Header() {
             <Nav.Link as={Link} to="/minthere" >MINT HERE</Nav.Link>
             <Nav.Link as={Link} to="/utility" >Utility</Nav.Link>
             <Nav.Link as={Link} to="/about" >About</Nav.Link>
+            <Nav.Link as={Link} to="/" >Staking</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to="/roadmap" key="1">Roadmap</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/faq" key="2">FAQ's</NavDropdown.Item>

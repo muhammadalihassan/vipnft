@@ -133,7 +133,7 @@ body {
 }
 
 .container {
-  max-width: 1150px;
+  max-width: 1260px;
 }
 
 .topbanner ul {
@@ -468,7 +468,7 @@ header.pageheader {
 
 .meet-team-sec h3 {
   font-family: 'Fredericka the Great';
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   font-size: 50px;
 }
 
@@ -482,14 +482,22 @@ header.pageheader {
 }
 
 .meet-team-sec p {
-  width: 420px;
   margin: 0 auto;
   font-weight: 500;
 }
-
+.meet-team-sec .row {
+  align-items: center;
+}
 .meet-team-sec p a {
   text-decoration: underline !important;
   color: #000;
+}
+.team-img img {
+  width: 80%;
+}
+
+.team-img {
+  text-align: center;
 }
 /* about css end */
 /* faq css start */
