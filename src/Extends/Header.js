@@ -12,7 +12,7 @@ function Header() {
     return (
       <Navbar  expand="lg">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <h2><span>The</span> FunGuys</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
