@@ -48,7 +48,7 @@ function About() {
                     Passionate Liverpool football club and New England Patriots supporter!</p>
                     </Col>
                 </Row>
-                <Row className='justify-content-end'>
+                <Row>
                     <Col md={4}>
                     <h5>Gina</h5>
                 <p>The talented artist behind the project. She is also a lover of mushrooms, so putting her art and mushrooms together was a no-brainer. </p>
@@ -62,46 +62,37 @@ function About() {
                 <Row>
                     <Col md={4}>
                         <div className="team-img">
-                        <img src={hans} alt=''/>
-                        </div>
-                    </Col>
-                    <Col md={4}>
-                    <h5>Hans</h5>
-                     <p>The tech guy and crypto lover. He’s the chief behind all of the the back-end tech-y bits.</p>
-                    </Col>
-                </Row>
-                <Row className='justify-content-end'>
-                    <Col md={4}>
-                    <h5>Jasper</h5>
-                    <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
-                    </Col>
-                    <Col md={4}>
-                    <div className="team-img">
                         <img src={jasper} alt=''/>
                         </div>
                     </Col>
+                    <Col md={4}>
+                    <h5>Jasper</h5>
+                     <p>The tech guy and crypto lover. He’s the chief behind all of the the back-end tech-y bits.</p>
+                    </Col>
                 </Row>
                 <Row>
+                   
+                    <Col md={4}>
+                    <h5>Nafy</h5>
+                     <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
+                    </Col>
                     <Col md={4}>
                         <div className="team-img">
                         <img src={nafy} alt=''/>
                         </div>
                     </Col>
-                    <Col md={4}>
-                    <h5>Nafy</h5>
-                     <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
-                    </Col>
                 </Row>
-                <Row className='justify-content-end'>
-                    <Col md={4}>
-                    <h5>Sammo</h5>
-                    <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
-                    </Col>
-                    <Col md={4}>
+                <Row>
+                <Col md={4}>
                     <div className="team-img">
                         <img src={sammo} alt=''/>
                         </div>
                     </Col>
+                    <Col md={4}>
+                    <h5>Sammo</h5>
+                    <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
+                    </Col>
+                    
                 </Row>
             </Container>
        </div>

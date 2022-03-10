@@ -417,7 +417,9 @@ body {
 }
 /* utility css end */
 /* about css start */
-
+.meet-team-sec .row:nth-child(odd) {
+  justify-content: end;
+}
 .about-img img {
   width: 100%;
 }
