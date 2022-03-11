@@ -15,8 +15,18 @@ import meet7 from './Assets/paul.png';
 // BUBBLE
 import bubble from './Assets/bubble.png';
 import { Link } from 'react-router-dom';
-
 import { Container, Row, Col } from 'react-bootstrap';
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: 'ease-in-sine',
+      delay: 1000,
+});
 
 function App() {
   return (
@@ -25,27 +35,27 @@ function App() {
       <Container>
       <div className='topbanner'>
           <ul>
-            <li>
+            <li  data-aos='fade-down'>
                <img src={guy1} alt='' className='bimg-1' />
-            </li>
-            <li>
+            </li >
+            <li  data-aos="fade-down">
             <img src={guy2} alt='' className='bimg-3'/>
             </li>
-            <li>
+            <li  data-aos="fade-down">
             <img src={guy3} alt='' className='bimg-5' />
             </li>
-            <li>
+            <li  data-aos="fade-down">
             <img src={guy4} alt='' className='bimg-7' />
             </li>
           </ul>
           <ul>
-            <li>
+            <li data-aos='fade-up'>
             <img src={guy5} alt='' className='bimg-2'/>
             </li>
-            <li>
+            <li data-aos='fade-up'>
             <img src={guy6} alt='' className='bimg-4' />
             </li>
-            <li>
+            <li data-aos='fade-up'>
             <img src={guy7} alt='' className='bimg-6' />
             </li>
           </ul>

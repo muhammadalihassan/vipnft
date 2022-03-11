@@ -14,8 +14,8 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #ffffff;
 }
-svg,li,span,a,button,input,.w-box{
-  transition: all 200ms ease !important;
+svg,span,a,button,input,.w-box{
+   transition: all 200ms ease !important;
 }
 
 /*code {
