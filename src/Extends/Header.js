@@ -22,7 +22,7 @@ function Header() {
             <Nav.Link as={Link} to="/minthere" >MINT HERE</Nav.Link>
             <Nav.Link as={Link} to="/utility" >Utility</Nav.Link>
             <Nav.Link as={Link} to="/about" >About</Nav.Link>
-            <Nav.Link as={Link} to="/" >Staking</Nav.Link>
+            <Nav.Link as={Link} to="/staking" >Staking</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to="/roadmap" key="1">Roadmap</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/faq" key="2">FAQ's</NavDropdown.Item>

@@ -74,7 +74,7 @@ function About() {
                    
                     <Col md={4}>
                     <h5>Nafy</h5>
-                     <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
+                     <p>Discord admin</p>
                     </Col>
                     <Col md={4}>
                         <div className="team-img">
@@ -90,9 +90,21 @@ function About() {
                     </Col>
                     <Col md={4}>
                     <h5>Sammo</h5>
-                    <p>Lorem ipsum is simply dummy text which we use to make a website. Lorem ipsum is simply dummy text which we use to make a website.</p>
+                    <p>Social media manager</p>
                     </Col>
                     
+                </Row>
+                <Row>
+                   
+                    <Col md={4}>
+                    <h5>Crexthemage</h5>
+                     <p>Social media manager</p>
+                    </Col>
+                    <Col md={4}>
+                        <div className="team-img">
+                        <img src={hans} alt=''/>
+                        </div>
+                    </Col>
                 </Row>
             </Container>
        </div>

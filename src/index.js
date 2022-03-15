@@ -13,7 +13,7 @@ import Utility from "./Views/Utility/Index";
 import About from "./Views/About/Index";
 import FAQ from "./Views/FAQ/Index";
 import Roadmap from "./Views/Roadmap/Index";
-
+import Staking from "./Views/Staking/Index";
 ReactDOM.render(
   <BrowserRouter basename="/thefunguysnft">
     <header className='pageheader'>
@@ -26,6 +26,7 @@ ReactDOM.render(
       <Route path="About" element={<About />} />
       <Route path="FAQ" element={<FAQ />} />
       <Route path="Roadmap" element={<Roadmap />} />
+      <Route path="Staking" element={<Staking />} />
     </Routes>
     <footer>
       <Footer />
