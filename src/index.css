@@ -121,7 +121,7 @@ ul{
 body {
   background-image: url(Assets/bg.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-color: transparent;
   background-attachment: fixed;
 
@@ -630,22 +630,7 @@ header.pageheader {
 /* roadmap css end */
 /* FOR WIDTH 1399px  */
 @media only screen and (max-width:1399px){
-  .searchbar {
-    padding-left: 5px;
-}
-.navbar-brand {
-  
-  padding: 20px 20px 20px 0;
-}
-.inner-bar {
-  width: 210px;
-}
-.inner-bar form > div {
-  width: 80%;
-}
-.inner-bar form button {
-  width: 20%;
-}
+ 
 }
 
 
@@ -659,17 +644,236 @@ header.pageheader {
 
 }
 
-/* FOR WIDTH 767px  */
-@media only screen and (max-width:767px){
+/* FOR WIDTH 1199px  */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  #basic-navbar-nav {
+    flex-direction: column;
+    align-items: end;
 
 }
-
-/* FOR WIDTH 579px  */
-@media only screen and (max-width:579px){
-
+.nav-wallet a {
+  display: inline-block;
+}
+.nav-wallet {
+  margin-top: 16px;
+}
+.topbanner ul li {
+  margin: 0px 12px;
+}
+.topbanner ul:nth-child(2) {
+  top: -50px;
+}
+.about-txt p {
+  width: 100%;
+}
+.about-txt {
+  padding: 20px 0;
+}
+.roadmap-sec img {
+  width: 100%;
+}
+.roadmap-img-4:after{
+  display: none;
+}
 }
 
-@media only screen and (max-width:480px){
+/* FOR WIDTH 991px  */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .topbanner ul li {
+    margin: 0;
+}
+.meet-guys img {
+  width: 100%;
+}
+.topbanner ul:nth-child(2) {
+  top: -38px;
+}
+#basic-navbar-nav .navbar-nav {
+  margin-top: 20px;
+}
+.pageheader .nav-item.dropdown {
+  background-color: #faffdb;
+}
+.pageheader .dropdown-menu a {
+  padding: 9px 48px;
+  text-align: left;
+  background-color: #faffdb;
+}
+.navbar-light .navbar-nav .nav-link {
+  padding: 9px 22px !important;
+}
+.nav-wallet {
+  margin: 20px 0;
+}
+.staking-main p {
+  width: 100%;
+}
+.about-txt p {
+  width: 100%;
+}
+.about-txt {
+  padding: 18px 0;
+}
+.roadmap-sec img {
+  width: 100%;
+}
+.roadmap-img-4:after {
+  width: 200px;
+  height: 200px;
+  right: 0;
+  left: -84px;
+}
+.roadrow-1:after {
+  width: 400px;
+  height: 400px;
+  right: 0;
+  top: -98px;
+}
+.roadmap-img-1:after {
+  width: 150px;
+  height: 150px;
+  bottom: 15px;
+  right: -81px;
+}
+.roadmap-img-2:after {
+  width: 150px;
+  height: 150px;
+    right: -79px;
+}
+.roadmap-img-3:after {
+  width: 150px;
+  height: 150px;
+  right: -80px;
+}
+.roadrow-2:after {
+  width: 360px;
+  height: 360px;
+}
+.roadrow-2:before {
+  width: 210px;
+  height: 160px;
+  left: 190px;
+  top: -83px;
+}
+.topbanner ul {
+  width: 100%;
+  overflow: hidden;
+}
+}
 
+@media only screen and (min-width: 300px) and (max-width: 519px){
+  .topbanner ul {
+    flex-wrap: wrap;
+}
+.topbanner ul li {
+  margin: 0;
+}
+.topbanner {
+  display: flex;
+  padding: 0;
+
+}
+.pageheader .nav-item.dropdown {
+  background-color: #faffdb;
+}
+.nav-wallet {
+  padding: 20px 0;
+}
+#basic-navbar-nav .navbar-nav {
+  margin-top: 15px;
+}
+.pageheader .dropdown-menu a {
+  padding: 5px 38px;
+  text-align: left;
+  background-color: #faffdb;
+}
+.topbanner ul:nth-child(2) {
+  top: 0;
+  left: -39px;
+}
+.live-minting {
+  margin: 20px 0;
+}
+.live-minting p {
+  width: 100%;
+}
+.meet-guys .row:nth-child(odd) {
+  flex-direction: column-reverse;
+}
+.meet-guys img {
+  margin-bottom: 30px;
+}
+.flt-rgt {
+  float: inherit;
+}
+.main-footer p span {
+  word-break: break-all;
+  padding: 0 20px;
+}
+.minthere-sec p {
+  width: 100%;
+}
+.instruction-sec h4 {
+  font-size: 35px;
+}
+.instruction-sec p {
+  width: 100%;
+  font-size: 19px;
+}
+.instruction-sec span {
+  word-break: break-all;
+  padding: 0px 10px;
+}
+.main-footer p {
+  color: #000000;
+}
+.staking-main p {
+  width: 100%;
+}
+.staking-main {
+  padding: 40px;
+}
+.about-txt p {
+  width: 100%;
+}
+.about-txt {
+  padding: 20px 0;
+}
+.meet-team-sec .row:nth-child(odd) {
+  flex-direction: column-reverse;
+}
+.meet-team-sec .row {
+  margin-bottom: 20px;
+}
+.roadmap-img-1:after {
+  right: 0px;
+}
+.roadmap-img-2:after {
+  right: 0px;
+}
+.roadmap-img-3:after {
+  right: 0px;
+}
+.roadmap-img-4:after {
+  right: 0px;
+  bottom: -21px;
+
+}
+.faq-sec {
+  padding: 30px 20px;
+  margin: 0;
+}
+.faq-sec ul li p span {
+  word-break: break-all;
+}
+.roadrow-1:after{
+  display: none;
+}
+.roadrow-2:after{
+  display: none;
+}
+.roadrow-2:before{
+  display: none;
+}
 }
  
