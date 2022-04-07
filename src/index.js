@@ -15,7 +15,7 @@ import FAQ from "./Views/FAQ/Index";
 import Roadmap from "./Views/Roadmap/Index";
 import Staking from "./Views/Staking/Index";
 ReactDOM.render(
-  <BrowserRouter basename="/thefunguysnft">
+  <BrowserRouter basename="/">
     <header className='pageheader'>
       <Header />
     </header>
