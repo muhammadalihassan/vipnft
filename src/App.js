@@ -63,12 +63,12 @@ function App() {
       </div>
       <div className='live-minting'>
         <h3>
-          minting is live!
+        Series 2 Coming Soon
         </h3>
-        <h4>
+        {/* <h4>
           mint count: 765/1050
         </h4>
-        <Link to="/minthere" className='all-btns mint-btn'>Mint here</Link>
+        <Link to="/minthere" className='all-btns mint-btn'>Mint here</Link> */}
         <p>Holders of a FunGuy from Series 1 or a FunGirl from Series 2 (coming in Q2)
            will be eligbile to stake their NFTs starting in Q2, 2022! Check out our utility plans <a href="/funguysnft/utility">Here</a></p>
       </div>

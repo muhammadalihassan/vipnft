@@ -19,7 +19,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav activeKey="/" className="">
             <Nav.Link as={Link} to="/" >Home</Nav.Link>
-            <Nav.Link as={Link} to="/minthere" >MINT HERE</Nav.Link>
+            {/* <Nav.Link as={Link} to="/minthere" >MINT HERE</Nav.Link> */}
             <Nav.Link as={Link} to="/utility" >Utility</Nav.Link>
             <Nav.Link as={Link} to="/about" >About</Nav.Link>
             <Nav.Link as={Link} to="/staking" >Staking</Nav.Link>
