@@ -70,7 +70,9 @@ function App() {
         </h4>
         <Link to="/minthere" className='all-btns mint-btn'>Mint here</Link> */}
         <p>Holders of a FunGuy from Series 1 or a FunGirl from Series 2 (coming in Q2)
-           will be eligbile to stake their NFTs starting in Q2, 2022! Check out our utility plans <a href="/funguysnft/utility">Here</a></p>
+           will be eligbile to stake their NFTs starting in Q2, 2022! Check out our utility plans 
+           <Link as={Link} to="/utility" >Here</Link>
+           </p>
       </div>
       <div className='meet-guys'>
         <div className='meetguys-head'>
