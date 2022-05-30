@@ -1,6 +1,4 @@
 // SITE LOGO
-import sitelogo from '../Assets/mainlogo.png';
-
 import { Navbar, Nav, Container, NavDropdown, Form, Button, Dropdown } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
