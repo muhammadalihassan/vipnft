@@ -8,23 +8,27 @@ import Header from './Extends/Header';
 import Footer from './Extends/Footer';
 import reportWebVitals from './reportWebVitals';
 
-import Utility from "./Views/Utility/Index";
-ReactDOM.render(
+import ExploreMarket from "./Views/ExploreMarket/Index";
+class Main extends React.Component {
+  render() {
+    return (
   <BrowserRouter basename="/vipnft">
     <header className='pageheader'>
       <Header />
     </header>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="Utility" element={<Utility />} />
+      <Route path="ExploreMarket" element={<ExploreMarket />} />
     </Routes>
     <footer>
       <Footer />
     </footer>
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
+  // document.getElementById('root')
 );
-
+}
+}
+ReactDOM.render(<Main />, document.getElementById("root"));
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

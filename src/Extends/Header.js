@@ -2,11 +2,11 @@
 import logo from '../Assets/logo-main.png';
 import infi from '../Assets/infi.png';
 
-import { Navbar, Nav, Container, NavDropdown, Form, Button, Dropdown, NavLink, InputGroup } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown, Form, Button, Dropdown, InputGroup } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 function Header() {
@@ -26,7 +26,7 @@ function Header() {
               <NavLink exact to="/" className='active'><span>Home</span></NavLink>
             </Nav.Item> */}
             <Nav.Item>
-              <NavLink exact to="/Profile"><FontAwesomeIcon icon={solid('cart-shopping')} /><span>Explore Market</span></NavLink>
+              <NavLink exact to="/ExploreMarket"><FontAwesomeIcon icon={solid('cart-shopping')} /><span>Explore Market</span></NavLink>
             </Nav.Item>
             <Nav.Item>
               <NavLink exact to="/Livefeed"><FontAwesomeIcon icon={solid('warehouse')} /><span>Your Collection</span></NavLink>

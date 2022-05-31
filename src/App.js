@@ -35,7 +35,31 @@ function App() {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   
   return (
@@ -43,7 +67,7 @@ function App() {
      <div className='banner-main'>
        <Container fluid>
          <div className='banner'>
-           <Col md={3}>
+           <Col md={6} xl={3}>
            <div className='banner-txt'>
                <h3>Locally Sourced NFTS</h3>
                <p>Nifty Gateway is the premier NFT marketplace for beginners, experts, and everyone in-between - without the hassle of gas fees and failed transactions.</p>
