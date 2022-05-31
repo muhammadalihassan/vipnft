@@ -1,5 +1,8 @@
 // SITE LOGO
-import { Navbar, Nav, Container, NavDropdown, Form, Button, Dropdown } from 'react-bootstrap';
+import logo from '../Assets/logo-main.png';
+import infi from '../Assets/infi.png';
+
+import { Navbar, Nav, Container, NavDropdown, Form, Button, Dropdown, NavLink, InputGroup } from 'react-bootstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -9,34 +12,38 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
       <Navbar  expand="lg">
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          <h2><span>The</span> FunGuys</h2>
+          <img src={logo} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav activeKey="/" className="">
-            <Nav.Link as={Link} to="/" >Home</Nav.Link>
-            {/* <Nav.Link as={Link} to="/minthere" >MINT HERE</Nav.Link> */}
-            <Nav.Link as={Link} to="/utility" >Utility</Nav.Link>
-            <Nav.Link as={Link} to="/about" >About</Nav.Link>
-            <Nav.Link as={Link} to="/staking" >Staking</Nav.Link>
-            <NavDropdown title="More" id="basic-nav-dropdown">
-          <NavDropdown.Item as={Link} to="/roadmap" key="1">Roadmap</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/faq" key="2">FAQ's</NavDropdown.Item>
-        </NavDropdown>
+        <Form.Select>
+          <option>Find a Collection</option>
+        </Form.Select>
+        <Nav >
+            {/* <Nav.Item>
+              <NavLink exact to="/" className='active'><span>Home</span></NavLink>
+            </Nav.Item> */}
+            <Nav.Item>
+              <NavLink exact to="/Profile"><FontAwesomeIcon icon={solid('cart-shopping')} /><span>Explore Market</span></NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink exact to="/Livefeed"><FontAwesomeIcon icon={solid('warehouse')} /><span>Your Collection</span></NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink exact to="/ProjectStatistics"><FontAwesomeIcon icon={solid('id-card')} /><span>Your Transactions</span></NavLink>
+            </Nav.Item>
           </Nav>
-          <div className='nav-wallet'>
-              <div className='nav-profile'>
-                <a href='https://discord.com/invite/HuCUdN48TB' className='all-btns' target="_blank">
-                  <span>Discord</span>
-                </a>
-              </div>
-              <div className='nav-wall'>
-              <a href='https://twitter.com/FunGuysCNFT' className='all-btns' target="_blank">
-                  <span>Twitter</span>
-                </a>
-              </div>
+          <div className='header-lft'>
+          {/* <InputGroup className="country">
+            <InputGroup.Text><img src={infi} alt="" /></InputGroup.Text>
+            <Form.Select>
+              <option>Mumbai</option>
+            </Form.Select>
+          </InputGroup> */}
+          <p><span>0</span> MATIC</p>
+          <a href='' className='med-btn'>authenticate</a>
           </div>
         </Navbar.Collapse>
       </Container>

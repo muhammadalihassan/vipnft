@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 import Utility from "./Views/Utility/Index";
 ReactDOM.render(
-  <BrowserRouter basename="/">
+  <BrowserRouter basename="/vipnft">
     <header className='pageheader'>
       <Header />
     </header>

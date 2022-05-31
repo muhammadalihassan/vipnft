@@ -8,8 +8,33 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 function Footer() {
   return (
     <div className="main-footer">
-     <p>©The FunGuys 2021, All Rights Reserved</p>
-     <p>Policy ID:<span>09a05cce8bc7c8cb46a78c2b96bc2e10efdb214f17e2793c6b3bd5b0</span></p>
+      <Container fluid>
+      <Row>
+        <Col md={4}>
+        <ul>
+        <li>
+          <a href="#"><FontAwesomeIcon icon={brands('instagram')} /></a>
+        </li>
+        <li>
+          <a href="#"><FontAwesomeIcon icon={brands('facebook-square')} /></a>
+        </li>
+        <li>
+          <a href="#"><FontAwesomeIcon icon={brands('twitter')} /></a>
+        </li>
+        <li>
+          <a href="#"><FontAwesomeIcon icon={brands('tiktok')} /></a>
+        </li>
+        <li>
+          <a href="#"><FontAwesomeIcon icon={brands('discord')} /></a>
+        </li>
+      </ul>
+        </Col>
+     <Col md={4}>
+     <p>Copyright 2022 Dashible Inc.</p>
+     </Col>
+     <Col md={4}><p>A Dashible Company</p></Col>
+      </Row>
+      </Container>
     </div>
   );
 }
