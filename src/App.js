@@ -231,10 +231,10 @@ function App() {
                     aria-describedby="basic-addon2"
                   />
                   <Button>
-                    subscribe
+                  Keep me posted
                   </Button>
                 </InputGroup>
-                {['checkbox'].map((type) => (
+                {/* {['checkbox'].map((type) => (
                   <div key={`default-${type}`} className="mb-3">
                     <Form.Check 
                       type={type}
@@ -242,7 +242,7 @@ function App() {
                       label={`Keep me posted`}
                     />
                   </div>
-                ))}
+                ))} */}
                 </Form>
                </div>
              </Col>
