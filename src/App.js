@@ -9,6 +9,7 @@ import mail from './Assets/mail-box.png';
 import step1 from './Assets/step1.png';
 import step2 from './Assets/step2.png';
 import step3 from './Assets/step3.png';
+import side from './Assets/side-banner.png';
 
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, InputGroup, FormControl, Button, Form} from 'react-bootstrap';
@@ -67,13 +68,21 @@ function App() {
      <div className='banner-main'>
        <Container fluid>
          <div className='banner'>
-           <Col md={6} xl={3}>
+           <Row>
+           <Col md={6} xl={4}>
            <div className='banner-txt'>
                <h3>Locally Sourced NFTS</h3>
                <p>Nifty Gateway is the premier NFT marketplace for beginners, experts, and everyone in-between - without the hassle of gas fees and failed transactions.</p>
                <Link as={Link} to="/" className='lrg-btn'>get started</Link>
              </div>
            </Col>
+           <Col md={6} xl={7}>
+             <div className='side-banner-div'>
+               <img src={side} />
+             </div>
+           </Col>
+           </Row>
+           
          </div>
        </Container>
      </div>

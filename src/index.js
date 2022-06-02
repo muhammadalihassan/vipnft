@@ -9,6 +9,7 @@ import Footer from './Extends/Footer';
 import reportWebVitals from './reportWebVitals';
 
 import ExploreMarket from "./Views/ExploreMarket/Index";
+import Showcase from "./Views/Showcase/Index";
 class Main extends React.Component {
   render() {
     return (
@@ -19,6 +20,7 @@ class Main extends React.Component {
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="ExploreMarket" element={<ExploreMarket />} />
+      <Route path="Showcase" element={<Showcase />} />
     </Routes>
     <footer>
       <Footer />

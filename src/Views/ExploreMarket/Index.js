@@ -50,6 +50,12 @@ function ExploreMarket() {
       const toggleSealAttribute = () => {
         setToggle2(!toggle2)
       };
+
+      const [expanded, setExpanded] = useState(false);
+  const setExpand = () => {
+    setExpanded(false);
+    window.scrollTo(0, 0);
+  }
     return (
       <section className='main'>
          <div className="explore-main">
@@ -62,7 +68,7 @@ function ExploreMarket() {
        </div>
        <Slider {...settings}>
          <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft1} alt="" />
            </div>
@@ -78,7 +84,7 @@ function ExploreMarket() {
            </div>
          </div>
          <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft2} alt="" />
            </div>
@@ -94,7 +100,7 @@ function ExploreMarket() {
            </div>
          </div>
          <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft3} alt="" />
            </div>
@@ -110,7 +116,7 @@ function ExploreMarket() {
            </div>
          </div>
          <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft4} alt="" />
            </div>
@@ -126,7 +132,7 @@ function ExploreMarket() {
            </div>
          </div>
          <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft3} alt="" />
            </div>
@@ -142,7 +148,7 @@ function ExploreMarket() {
            </div>
          </div>
          <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft2} alt="" />
            </div>
@@ -168,7 +174,7 @@ function ExploreMarket() {
        <Row>
            <Col md={3}>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft1} alt="" />
            </div>
@@ -183,7 +189,7 @@ function ExploreMarket() {
            </Col>
            <Col md={3}>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft2} alt="" />
            </div>
@@ -198,7 +204,7 @@ function ExploreMarket() {
            </Col>
            <Col md={3}>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft3} alt="" />
            </div>
@@ -213,7 +219,7 @@ function ExploreMarket() {
            </Col>
            <Col md={3}>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft4} alt="" />
            </div>
@@ -302,7 +308,7 @@ function ExploreMarket() {
        <Row>
            <Col md={ toggle2 == false ? 12 : 4 } >
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft1} alt="" />
            </div>
@@ -317,7 +323,7 @@ function ExploreMarket() {
            </Col>
            <Col md={ toggle2 == false ? 12 : 4 }>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft2} alt="" />
            </div>
@@ -332,7 +338,7 @@ function ExploreMarket() {
            </Col>
            <Col md={ toggle2 == false ? 12 : 4 }>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase" onClick={setExpand}>
            <div className='up-img'>
              <img src={nft3} alt="" />
            </div>
@@ -347,7 +353,7 @@ function ExploreMarket() {
            </Col>
            <Col md={ toggle2 == false ? 12 : 4 }>
            <div className='up-wid'>
-         <Link as={Link} to="/">
+         <Link as={Link} to="/Showcase"  onClick={setExpand}>
            <div className='up-img'>
              <img src={nft4} alt="" />
            </div>
