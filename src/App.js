@@ -10,19 +10,26 @@ import step1 from './Assets/step1.png';
 import step2 from './Assets/step2.png';
 import step3 from './Assets/step3.png';
 import side from './Assets/side-banner.png';
+import bl from './Assets/banner-logo.png';
 
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, InputGroup, FormControl, Button, Form} from 'react-bootstrap';
+import { Container, Row, Col, InputGroup, FormControl, Button, Form, Modal} from 'react-bootstrap';
 // AOS
 import AOS from 'aos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Slider from "react-slick";
+import MultiStep from './Views/Multistep/Index';
 import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Counter from './Extends/Counter.js';
+import StepOne from './Views/StepOne/Index'
+import StepTwo from './Views/StepTwo/Index'
+import StepThree from './Views/StepThree/Index'
+// import StepFour from './Views/StepFour/Index'
+
 AOS.init({
       offset: 200,
       duration: 1000,
@@ -31,6 +38,10 @@ AOS.init({
 });
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const settings = {
     dots: false,
     infinite: true,
@@ -62,17 +73,27 @@ function App() {
       }
     ]
   };
-  
+  const steps = [
+    { component: <StepOne /> },
+    { component: <StepTwo /> },
+    { component: <StepThree /> },
+    // { component: <StepFour /> }
+  ]
+
   return (
     <section className='main'>
+    
      <div className='banner-main'>
        <Container fluid>
          <div className='banner'>
            <Row>
            <Col md={6} xl={4}>
            <div className='banner-txt'>
-               <h3>Locally Sourced NFTS</h3>
-               <p>Nifty Gateway is the premier NFT marketplace for beginners, experts, and everyone in-between - without the hassle of gas fees and failed transactions.</p>
+           {/* <img src={bl} /> */}
+               <h3>Locally Sourced NFTs</h3>
+               <p>Local Businesses<br/>
+                          Local Artists<br/>
+		        Global Clout     </p>
                <Link as={Link} to="/" className='lrg-btn'>get started</Link>
              </div>
            </Col>
@@ -204,16 +225,8 @@ function App() {
            <Col md={5}>
              <div className='locally-txt'>
                <h5>What’s a locally sourced NFT?</h5>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                   Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                    accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
-                     consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                     ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                      gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                         ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  </p>
+               <p>Locally sourced NFTs are non-fungible tokens that give you real benefits at real places in your community.</p>
+               <p>We work with local businesses and local artists to create location-based NFTs that not only look good but give you global clout while supporting the community.</p>
              </div>
            </Col>
          </Row>
@@ -231,7 +244,7 @@ function App() {
              <Col md={9}>
                <div className='mail-txt'>
                  <h6>Stay in the know</h6>
-                 <p>Enter your email to recive daily round-up of submissions</p>
+                 <p>Subscribe to our newsletter</p>
                  <Form>
                  <InputGroup className="mb-3">
                   <FormControl
@@ -276,14 +289,15 @@ function App() {
                  <img src={step1} alt="" />
                </div>
                <div className='step-txt'>
-                 <p>We work with local artists and local businesses to create location-based NFTs</p>
+                 <p>We work with local artists and local businesses to create VIP NFTs</p>
                </div>
              </div>
            </Col>
            <Col md={4}>
              <div className='steps-wid '>
                <div className='step-txt'>
-               <p>YAY!! <span>You purchase an NFT</span></p>
+               <p>You purchase an NFT
+<span>You are now a VIP</span></p>
                </div>
                <div className='steps'>
                  <img src={step2} alt="" />
@@ -307,7 +321,7 @@ function App() {
                  <img src={step3} alt="" />
                </div>
                <div className='step-txt'>
-                 <p>Visit the business and use the Dash​ible app to show them your locally sourced NFT and get rewarded </p>
+                 <p>Visit the business and use the Dash​ible app to show them your VIP NFT and get rewarded</p>
                </div>
              </div>
            </Col>
@@ -317,6 +331,45 @@ function App() {
          </div>
        </Container>
      </div>
+     <div className='join-waitlist'>
+       <Container>
+         <div className='how-head'>
+           <h5>Join the Waitlist Today!</h5>
+         </div>
+         <div className='waitlist-btns'>
+           <Row>
+             <Col md={3}>
+             <Button onClick={handleShow}>
+               I am Business <span>Owner in NYC</span> 
+             </Button>
+             <p>Create your NFTs with us</p>
+             </Col>
+             <Col md={3}>
+             <Button>
+               I am a NYC <span>Creator</span>
+             </Button>
+             <p>Create locally sourced NFTs</p>
+             </Col>
+           </Row>
+         </div>
+       </Container>
+     </div>
+     <Modal show={show} onHide={handleClose} centered className='bussiness-modal'>
+        <Modal.Header closeButton>
+          <Modal.Title>Join the Waitlist</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+           <MultiStep activeStep={0} steps={steps} />
+           </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </section >
   );
 }

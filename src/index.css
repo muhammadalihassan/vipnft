@@ -801,7 +801,100 @@ transition: all 1s;
   margin: 50px 0;
 }
 /* showcase css end */
+/* join waitlist css start */
+.waitlist-btns button {
+  width: 100%;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #ff8c21;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 20px;
+  border: 2px solid #ff8c21;
+}
 
+.waitlist-btns {
+  text-align: center;
+}
+
+.waitlist-btns .row {
+  justify-content: center;
+}
+
+.waitlist-btns button:hover {
+  background-color: transparent;
+  color: #ff8c21;
+  border-color: #ff8c21;
+}
+.waitlist-btns button span {
+  display: block;
+}
+.waitlist-btns p {
+  color: #4ab9ed;
+  font-weight: 700;
+  margin: 9px 0;
+}
+
+.join-waitlist .how-head {
+  margin-bottom: 30px;
+}
+
+.join-waitlist {
+  margin: 50px 0;
+}
+.waitlist-btns button:focus+.waitlist-btns button, .waitlist-btns button:focus {
+  color: #fff;
+  background-color: #ff8c21;
+  border-color: #ff8c21;
+  box-shadow: 0 0 0 .25remrgba(49,132,253,.5);
+}
+.bussiness-modal .modal-dialog {
+  max-width: 900px;
+}
+.bussiness-modal .modal-title {
+  color: #FF8C21;
+  font-weight: 900;
+  font-size: 30px;
+}
+.bussiness-modal .go2441762052 {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-1-txt {
+  color: #000;
+  text-align: center;
+}
+
+.step-1-txt h6 {
+  color: #4AB9ED;
+  font-weight: 600;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-1-txt h6 img {
+  width: 8%;
+  margin-left: 7px;
+}
+
+.form-layout {
+  box-shadow: 0 0 50px 0 #bed7e069;
+  padding: 30px;
+  border-radius: 13px;
+}
+
+.form-layout input {
+  width: 100%;
+}
+
+/* join waitlist css end */
 
 /* FOR WIDTH 1399px  */
 @media only screen and (max-width:1399px){
