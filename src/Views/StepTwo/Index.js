@@ -1,35 +1,26 @@
 import React, { useState } from 'react'
+import { Row, Col, Form} from 'react-bootstrap';
+import yelp from '../../Assets/yelp.jpg';
 
 export default () => {
-  const [email, setEmail] = useState('')
-  const [emailConfirm, setEmailConfirm] = useState('')
-
   return (
-    <div>
-      <div className='row'>
-        <div className='six columns'>
-          <label>Your email</label>
-          <input
-            className='u-full-width required'
-            placeholder='test@mailbox.com'
-            type='email'
-            onChange={e => setEmail(e.target.value)}
-            value={email}
-            autoFocus
-          />
+    <div className=''>
+        <div className='step-1-txt'>
+            <h6>Is This Your Business?</h6>
+            <p>Link Your Yelp account so that we can retrieve your business information.</p>
         </div>
-      </div>
-      <div className='row'>
-        <div className='six columns'>
-          <label>Confirm email</label>
-          <input
-            className='u-full-width'
-            placeholder='Confirm email'
-            type='email'
-            onChange={e => setEmailConfirm(e.target.value)}
-            value={emailConfirm}
-          />
-        </div>
+      <div className='step-2-check'>
+  {['radio'].map((type) => (
+    <div key={`default-${type}`} className="mb-3">
+      <Form.Check 
+        type={type}
+        id={`default-${type}`}
+        label={`I don't see my Business ${type}`}
+      />
+    </div>
+  ))}
+  <p>We can't find your business page in yelp business directory.
+Please first register with yelp and try again.</p>
       </div>
     </div>
   )

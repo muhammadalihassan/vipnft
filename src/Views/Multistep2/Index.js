@@ -107,8 +107,8 @@ export default function MultiStep (props) {
   const [stylesState, setStyles] = useState(getTopNavStyles(activeStep, props.steps.length))
   const [compState, setComp] = useState(activeStep)
   const [buttonsState, setButtons] = useState(getButtonsState(activeStep, props.steps.length))
-  const [nextState, setNextState] = useState('FIND MY BUSINESS IN YELP');
-  const [prevState, setPrevState] = useState('CANCEL');
+  const [nextState, setNextState] = useState('CONTINUE');
+  const [prevState, setPrevState] = useState('CONTINUE');
   
   useEffect(() => {
     console.log('Index changed: ', props.activeStep);
@@ -133,7 +133,7 @@ export default function MultiStep (props) {
   const previous = () => {
     // alert(compState);
     if( compState === 1 ){
-      setNextState('FIND MY BUSINESS IN YELP')
+      setNextState('CONTINUE')
     }else if(compState === 2){
       setNextState('CLICK TO REGISTER WITH YELP')
     }
@@ -204,7 +204,7 @@ export default function MultiStep (props) {
         </button>
         <button
           style={buttonsState.showPreviousBtn ? props.prevStyle : { display: 'none' }}
-          onClick={previous}
+          onClick={next}
         >
           {prevState}
         </button>
@@ -223,10 +223,6 @@ export default function MultiStep (props) {
           })
         : <div>{props.steps[compState].component}</div>}
       <div>{renderNav(showNav)}</div>
-      <div className='step-2-text' style={{ display: `${compState === 1?"block":'none'}` }}>
-        <p>Don’t have a Yelp account? Please create a Yelp profile and register again.<a href='https://business.yelp.com/'>Click here to get started</a></p>
-        <img src={yelp} />
-      </div>
     </div>
   )
 }

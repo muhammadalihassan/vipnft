@@ -21,6 +21,7 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import React, { Component, useState } from "react";
 import Slider from "react-slick";
 import MultiStep from './Views/Multistep/Index';
+import MultiStep2 from './Views/Multistep2/Index';
 import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -28,7 +29,8 @@ import Counter from './Extends/Counter.js';
 import StepOne from './Views/StepOne/Index'
 import StepTwo from './Views/StepTwo/Index'
 import StepThree from './Views/StepThree/Index'
-// import StepFour from './Views/StepFour/Index'
+import StepFour from './Views/StepFour/Index'
+import StepFive from './Views/StepFive/Index'
 
 AOS.init({
       offset: 200,
@@ -39,9 +41,12 @@ AOS.init({
 
 function App() {
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
   const settings = {
     dots: false,
     infinite: true,
@@ -79,7 +84,10 @@ function App() {
     { component: <StepThree /> },
     // { component: <StepFour /> }
   ]
-
+  const steps2 = [
+    { component: <StepFour /> },
+    { component: <StepFive /> }
+  ]
   return (
     <section className='main'>
     
@@ -345,7 +353,7 @@ function App() {
              <p>Create your NFTs with us</p>
              </Col>
              <Col md={3}>
-             <Button>
+             <Button onClick={handleShow2}>
                I am a NYC <span>Creator</span>
              </Button>
              <p>Create locally sourced NFTs</p>
@@ -361,14 +369,14 @@ function App() {
         <Modal.Body>
            <MultiStep activeStep={0} steps={steps} />
            </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
+      </Modal>
+      <Modal show={show2} onHide={handleClose2} centered className='bussiness-modal'>
+        <Modal.Header closeButton>
+          <Modal.Title>Join the Waitlist</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+           <MultiStep2 activeStep={0} steps={steps2} />
+           </Modal.Body>
       </Modal>
     </section >
   );
